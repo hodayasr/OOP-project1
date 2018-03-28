@@ -1,6 +1,5 @@
 package matala1;
 
-import java.util.Random;
 
 import Turtle.SimpleTurtle;
 

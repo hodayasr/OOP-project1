@@ -1,39 +1,30 @@
 package matala1;
 
 public class SortComplex implements Sortable {
-
+	// **** ///
 	 private Complex[] cArr;    
 	 public SortComplex(Complex[] c)
 	 {
-		 cArr=new Complex[c.length];
-		 for(int i=0;i<c.length;i++)
-		 {
-			 this.cArr[i].setA(c[i].getA());
-			 this.cArr[i].setB(c[i].getB());
-		 }
+		 this.cArr=c;
 	 }
 	@Override
 	public int compare(Object left, Object right) {
-		// TODO Auto-generated method stub
-		return 0;
+		return ((Complex)left).compare((Complex)right);
 	}
 
 	@Override
 	public Object valueAt(int position) {
-		// TODO Auto-generated method stub
-		return null;
+		return cArr[position];
 	}
 
 	@Override
 	public void setValue(Object value, int position) {
-		// TODO Auto-generated method stub
-		
+		this.cArr[position]=(Complex)value;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		return 0;
+		return cArr.length;
 	}
 
 }
